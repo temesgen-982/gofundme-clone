@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu } from "lucide-react"; // Make sure you have lucide-react installed
+import { Menu, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,32 +13,36 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+
 export function MainNav() {
-  // Define your navigation items
-  const navItems = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Start a Fundraiser",
-      href: "/start",
-    },
+  const desktopNavItems = [
+    { title: "Donate", href: "/donate" },
+    { title: "Fundraise", href: "/start" },
+    { title: "About", href: "/about" },
+  ];
+
+  const mobileNavItems = [
+    { title: "Home", href: "/" },
+    { title: "Donate", href: "/donate" },
+    { title: "Fundraise", href: "/start" },
+    { title: "About", href: "/about" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-self-stretch justify-between">
-        {/* Logo */}
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          {/* Replace with your actual logo or icon */}
-          <span className="font-bold text-xl text-gofundmeBlue">FundSphere</span>{" "}
-          {/* Using a placeholder text logo */}
+    <header className="sticky flex items-stretch justify-stretch top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center">
+        <Button variant="ghost" size="icon" className="mr-4 text-gray-700 hover:text-gray-900">
+          <Search className="h-5 w-5" />
+          <span className="sr-only">Search</span>
+        </Button>
+
+        <Link href="/" className="mr-auto flex items-center space-x-2">
+          <span className="font-bold text-2xl text-gofundmeBlue">FundSphere</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navItems.map((item) => (
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-auto">
+          {desktopNavItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -47,40 +51,39 @@ export function MainNav() {
               {item.title}
             </Link>
           ))}
-          <Link href="/login"> {/* Login link */}
-            <Button variant="ghost">Login</Button>
+          <Link href="/signin">
+            <Button variant="ghost" className="hover:bg-gray-100 px-4">Sign In</Button>
           </Link>
-          <Link href="/donate"> {/* Donate button */}
-            <Button className="bg-gofundmeBlue hover:bg-gofundmeBlue/90">Donate</Button>
+          <Link href="/start">
+            <Button className="bg-gofundmeBlue hover:bg-gofundmeBlue/90 text-white font-semibold px-4 py-2">
+              Start a Fundraiser
+            </Button>
           </Link>
         </nav>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center">
+        {/* Mobile Navigation and Trigger */}
+        <div className="md:hidden flex items-center ml-auto">
           <Sheet>
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
-                className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
-              <SheetHeader className="px-4">
+            <SheetContent side="right" className="pr-0 w-[200px] sm:w-[240px]">
+              <SheetHeader className="px-4 pb-4 border-b">
                 <SheetTitle>
                   <Link href="/" className="flex items-center space-x-2">
                     <span className="font-bold text-xl text-gofundmeBlue">FundSphere</span>
                   </Link>
                 </SheetTitle>
-                <SheetDescription className="sr-only">
-                  Navigation menu for FundSphere.
-                </SheetDescription>
               </SheetHeader>
               <nav className="grid gap-2 p-4 text-sm font-medium">
-                {navItems.map((item) => (
+                {mobileNavItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -89,11 +92,11 @@ export function MainNav() {
                     {item.title}
                   </Link>
                 ))}
-                <Link href="/login" className="flex w-full items-center py-2 text-lg font-semibold">
-                  Login
+                <Link href="/signin" className="flex w-full items-center py-2 text-lg font-semibold">
+                  Sign In
                 </Link>
-                <Link href="/donate" className="flex w-full items-center py-2 text-lg font-semibold">
-                  <Button className="w-full bg-gofundmeBlue hover:bg-gofundmeBlue/90">Donate</Button>
+                <Link href="/start" className="flex w-full items-center py-2 text-lg font-semibold">
+                  <Button className="w-full bg-gofundmeBlue hover:bg-gofundmeBlue/90">Start a Fundraiser</Button>
                 </Link>
               </nav>
             </SheetContent>
@@ -103,4 +106,3 @@ export function MainNav() {
     </header>
   );
 }
-
