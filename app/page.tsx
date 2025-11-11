@@ -16,7 +16,7 @@ export default function HomePage() {
       <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-background.jpg"
+            src="/background.jpg"
             alt="Community helping each other"
             fill
             style={{ objectFit: "cover" }}
