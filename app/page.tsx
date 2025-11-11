@@ -1,65 +1,99 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 
-export default function Home() {
+import { mockCampaigns, Campaign } from "@/lib/data";
+
+export default function HomePage() {
+  // Get the first 3 campaigns to display as trending
+  const trendingCampaignsToShow = mockCampaigns.slice(0, 3);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden">
+      {/* Background Image/Overlay */}
+      <div className="absolute inset-0 z-0">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/background.jpg"
+          alt="Community helping each other"
+          fill
+          style={{ objectFit: "cover" }}
           priority
+          className="brightness-50"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+      </div>
+
+      <div className="container relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-center">
+        {/* Main Hero Text Content */}
+        <div className="col-span-1 md:col-span-1 lg:col-span-2 text-white text-center md:text-left">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+            Your Compassion. Their Future.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg sm:text-xl mb-8 max-w-lg mx-auto md:mx-0">
+            Support causes you care about, from emergency relief to personal dreams.
+            Every donation makes a difference.
           </p>
+          <div className="flex justify-center md:justify-start space-x-4">
+            <Link href="/start">
+              <Button size="lg" className="bg-gofundmeBlue hover:bg-gofundmeBlue/90 text-white font-semibold py-3 px-8 rounded-full shadow-lg">
+                Start a Fundraiser
+              </Button>
+            </Link>
+            <Link href="/explore">
+              <Button size="lg" variant="secondary" className="bg-white text-gofundmeBlue hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg">
+                Explore Campaigns
+              </Button>
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Trending Campaigns Card (Right side on desktop, below on mobile) */}
+        <div className="col-span-1 md:col-span-1 lg:col-span-1 flex justify-center md:justify-end">
+          <Card className="w-full max-w-md bg-white/90 backdrop-blur-sm shadow-xl p-4 md:p-6">
+            <CardHeader className="p-0 pb-4">
+              <CardTitle className="text-2xl font-bold text-gray-800">Trending Campaigns</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 space-y-4">
+              {trendingCampaignsToShow.map((campaign) => {
+                const progress = Math.min((campaign.currentAmount / campaign.goalAmount) * 100, 100);
+                return (
+                  // Use campaign.slug for the href
+                  <Link key={campaign.id} href={`/donation/${campaign.slug}`} className="block hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden">
+                        <Image
+                          src={campaign.imageUrl} // Use imageUrl from mock data
+                          alt={campaign.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          style={{ objectFit: "cover" }}
+                          className="transition-transform duration-300 hover:scale-105"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-800 line-clamp-1">{campaign.title}</h4>
+                        <p className="text-sm text-gray-600">
+                          ${campaign.currentAmount.toLocaleString()} of ${campaign.goalAmount.toLocaleString()}
+                        </p>
+                        <Progress value={progress} className="h-2 mt-1 [&::-webkit-progress-bar]:bg-gray-200 [&::-webkit-progress-value]:bg-gofundmeBlue" />
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+              <div className="text-center mt-6">
+                <Link href="/explore-all">
+                  <Button variant="outline" className="text-gofundmeBlue border-gofundmeBlue hover:bg-gofundmeBlue hover:text-white transition-colors">
+                    Explore All
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
   );
 }
