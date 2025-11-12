@@ -35,7 +35,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           {/* Top-left */}
           <Image
-            src="https://images.unsplash.com/photo-1762770663487-6c03bb94fe84?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+            src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9uYXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400"
             alt="Fundraiser 1"
             width={80}
             height={80}
