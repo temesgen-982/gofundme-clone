@@ -91,7 +91,7 @@ export function MainNav() {
                     {item.title}
                   </Link>
                 ))}
-                <Link href="/signin" className="flex w-full items-center py-2 text-lg font-semibold">
+                <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold">
                   Sign In
                 </Link>
                 <Link href="/">
