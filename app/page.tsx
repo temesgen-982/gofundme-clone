@@ -16,14 +16,14 @@ export default function HomePage() {
           <p className="text-center">
             #1 crowdfunding platform
           </p>
-          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-gray-900 mb-6">
+          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.2] tracking-tight text-gray-900 mb-6">
             Successful fundraisers start here.
           </h1>
           <div className="flex justify-center space-x-4">
             <Link href="/start">
               <Button
                 size="lg"
-                className="text-white font-semibold py-3 px-8 rounded-full shadow-lg"
+                className="text-light bg-dark font-semibold py-3 px-8 rounded-full shadow-lg"
               >
                 Start a Fundraiser
               </Button>
@@ -73,8 +73,8 @@ export default function HomePage() {
       <section className="container mx-auto py-12 md:py-16 lg:py-20">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Featured Campaigns</h2>
-          <Link href="/explore-all">
-            <Button variant="outline" className="text-gofundmeBlue border-gofundmeBlue hover:bg-gofundmeBlue hover:text-white transition-colors">
+          <Link href="/">
+            <Button variant="outline" className="border border-dark text-dark hover:bg-gray-100 transition-colors">
               View All
             </Button>
           </Link>
@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* How it Works Section */}
-      <section className="bg-gray-50 py-12 md:py-16 lg:py-20">
+      <section className="bg-gray-50 py-10">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Fundraising on FundSphere is easy, powerful, and trusted.
@@ -128,8 +128,8 @@ export default function HomePage() {
           </div>
 
           <div className="mt-12">
-            <Link href="/how-it-works">
-              <Button size="lg" variant="outline" className="text-gofundmeBlue border-gofundmeBlue hover:bg-gofundmeBlue hover:text-white transition-colors">
+            <Link href="/">
+              <Button size="lg" variant="outline" className="hover:border hover:border-black transition-colors">
                 Learn More About How it Works
               </Button>
             </Link>
