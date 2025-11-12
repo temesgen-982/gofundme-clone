@@ -20,7 +20,7 @@ export default function HomePage() {
             Successful fundraisers start here.
           </h1>
           <div className="flex justify-center space-x-4">
-            <Link href="/start">
+            <Link href="/">
               <Button
                 size="lg"
                 className="text-light bg-dark font-semibold py-3 px-8 rounded-full shadow-lg"
