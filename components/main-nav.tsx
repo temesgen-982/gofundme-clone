@@ -36,7 +36,7 @@ export function MainNav() {
         </div>
 
         <Link href="/" className="flex items-center space-x-2">
-          <span className="font-bold text-2xl text-gofundmeBlue">FundSphere</span>
+          <span className="font-bold text-2xl text-green">FundSphere</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -54,7 +54,7 @@ export function MainNav() {
             <Button variant="ghost" className="hover:bg-gray-100 px-4">Sign In</Button>
           </Link>
           <Link href="/">
-            <Button className="font-semibold px-4 py-2 rounded-full">
+            <Button className="font-semibold px-4 py-2 rounded-full bg-white border border-black text-black hover:bg-gray-300">
               Start a Fundraiser
             </Button>
           </Link>
@@ -77,7 +77,7 @@ export function MainNav() {
               <SheetHeader className="px-4 pb-4 border-b">
                 <SheetTitle>
                   <Link href="/" className="flex items-center space-x-2">
-                    <span className="font-bold text-xl text-gofundmeBlue">FundSphere</span>
+                    <span className="font-bold text-xl text-green">FundSphere</span>
                   </Link>
                 </SheetTitle>
               </SheetHeader>
