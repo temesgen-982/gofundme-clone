@@ -24,7 +24,7 @@ export function MainNav() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
       <div className="container mx-auto relative flex h-16 items-center justify-center">
         <div className="hidden md:flex items-center space-x-6 text-sm font-medium absolute left-0">
           <Button variant="ghost" size="icon" className="mr-4 text-gray-700 hover:text-gray-900">
