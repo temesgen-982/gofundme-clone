@@ -24,7 +24,7 @@ export default function HomePage() {
           {/* LEFT IMAGES */}
           <div className="hidden md:flex flex-col items-center justify-center gap-8 relative z-10">
             {/* Your Cause */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float -translate-y-4">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float -translate-y-4 translate-x-20">
               <Image
                 src="https://images.unsplash.com/photo-1599052994917-094119d80d21?auto=format&fit=crop&q=60&w=400" // Image of a family/child for 'Your Cause'
                 alt="Your cause"
@@ -32,11 +32,11 @@ export default function HomePage() {
                 height={90}
                 className="rounded-full object-cover w-[90px] h-[90px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Your Cause</span>
+              <span className="absolute bottom-8 -left-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Your Cause</span>
             </div>
 
             {/* Medical */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float-delayed translate-y-4">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float-delayed -translate-y-1 -translate-x-10">
               <Image
                 src="https://images.unsplash.com/photo-1532938911079-cdfd0ed53f06?auto=format&fit=crop&q=60&w=400" // Medical professional or patient
                 alt="Medical"
@@ -44,11 +44,11 @@ export default function HomePage() {
                 height={100}
                 className="rounded-full object-cover w-[100px] h-[100px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Medical</span>
+              <span className="absolute -right-7 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Medical</span>
             </div>
 
             {/* Emergency */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float -translate-y-2">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float -translate-y-2 translate-x-10">
               <Image
                 src="https://images.unsplash.com/photo-1543874017-f50f75723cf7?auto=format&fit=crop&q=60&w=400" // Image related to emergency/disaster
                 alt="Emergency"
@@ -56,7 +56,7 @@ export default function HomePage() {
                 height={80}
                 className="rounded-full object-cover w-[80px] h-[80px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Emergency</span>
+              <span className="absolute bottom-8 -left-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Emergency</span>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export default function HomePage() {
           {/* RIGHT IMAGES */}
           <div className="hidden md:flex flex-col items-center justify-center gap-8 relative z-10">
             {/* Education */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float translate-y-4">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float translate-y-4 -translate-x-20">
               <Image
                 src="https://images.unsplash.com/photo-1546410531-bb4439c36211?auto=format&fit=crop&q=80&w=870" // Image related to education
                 alt="Education"
@@ -84,11 +84,11 @@ export default function HomePage() {
                 height={100}
                 className="rounded-full object-cover w-[100px] h-[100px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Education</span>
+              <span className="absolute -left-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Education</span>
             </div>
 
             {/* Business */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float-delayed -translate-y-4">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float-delayed translate-y-1 translate-x-10">
               <Image
                 src="https://images.unsplash.com/photo-1556761175-5973dd3039d7?auto=format&fit=crop&q=60&w=400" // Image related to business
                 alt="Business"
@@ -96,11 +96,11 @@ export default function HomePage() {
                 height={90}
                 className="rounded-full object-cover w-[90px] h-[90px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Business</span>
+              <span className="absolute bottom-3 -right-6 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Business</span>
             </div>
 
             {/* Animals */}
-            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float translate-y-2">
+            <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float translate-y-2 -translate-x-20">
               <Image
                 src="https://images.unsplash.com/photo-1543466835-09a769850125?auto=format&fit=crop&q=60&w=400" // Image of animals
                 alt="Animals"
@@ -108,7 +108,7 @@ export default function HomePage() {
                 height={80}
                 className="rounded-full object-cover w-[80px] h-[80px]"
               />
-              <span className="absolute -bottom-4 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Animal</span>
+              <span className="absolute -left-7 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Animal</span>
             </div>
           </div>
         </div>
