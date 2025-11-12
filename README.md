@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# gofundme-clone
 
-## Getting Started
+A Next.js + Tailwind front-end clone of a crowdfunding platform (inspired by GoFundMe). This repo contains the client-side UI built with Next.js 16 and React 19, using Shadcn UI and Tailwind for styling.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About
+gofundme-clone is a front-end implementation of a crowdfunding platform UI. It demonstrates campaign details, and typical UI patterns for creating and donating to campaigns.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech stack
+- Next.js 16 (app router)
+- React 19
+- Tailwind CSS 4
+- Shadcn UI (dialog, dropdown, navigation, progress, slot)
+- react-simple-icons and lucide-react for icons
+- TypeScript
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Local setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repo
+   git clone https://github.com/temesgen-982/gofundme-clone.git
+   cd gofundme-clone
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies (choose one)
+   pnpm install
 
-## Deploy on Vercel
+3. Run development server
+   pnpm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Contact
+Owner: temesgen-982 — https://github.com/temesgen-982
+tedenadane@gmail.com
