@@ -107,11 +107,11 @@ export default function HowItWorks() {
           </div>
 
           {/* Right Column: Steps */}
-          <div className="md:w-1/2 flex flex-col items-start text-left space-y-8">
+          <div className="md:w-1/2 flex flex-col items-start text-left space-y-7">
             {stepsData.map((step, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full"
+                className="flex items-start gap-3 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full"
                 onClick={() => handleStepClick(index)}
               >
                 <div
