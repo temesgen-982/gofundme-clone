@@ -1,14 +1,36 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Share2, CircleDollarSign } from "lucide-react";
-
+import { useState } from "react";
 import { mockCampaigns } from "@/lib/data";
 import { CampaignCard } from "@/components/campaign-card";
 
 export default function HomePage() {
   const featuredCampaigns = mockCampaigns.slice(0, 6); // Display first 6 as featured
+  const [activeStep, setActiveStep] = useState(0); // State to manage the active step for the image
 
+  const stepsData = [
+    {
+      title: "Use our tools to create your fundraiser",
+      description: "You'll be guided by prompts to add fundraiser details and set your goal. Make updates anytime.",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965da9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      linkText: "Get tips for starting your fundraiser.",
+      linkHref: "/"
+    },
+    {
+      title: "Reach donors by sharing",
+      description: "Share your fundraiser link and use the resources in your dashboard to gain momentum.",
+      image: "https://images.unsplash.com/photo-1497911674483-fe3917454232?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      linkText: null // No specific link for this step in the example
+    },
+    {
+      title: "Securely receive funds",
+      description: "Add your bank information, or invite your fundraiser beneficiary to add theirs, and start receiving funds.",
+      image: "https://images.unsplash.com/photo-1593113616828-6f22bce35d7b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      linkText: null // No specific link for this step in the example
+    },
+  ];
   return (
     <>
       <section className="w-full py-16 md:py-20 bg-white text-center md:text-left relative overflow-hidden">
@@ -89,7 +111,7 @@ export default function HomePage() {
       </section>
 
       {/* How it Works Section */}
-      <section className="py-10 bg-gray-50"> {/* Added a light background for this section */}
+      <section className="py-10 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Fundraising on FundSphere is easy, powerful, and trusted.
@@ -98,56 +120,52 @@ export default function HomePage() {
             GoFundMe empowers people to help others. We combine technology, trust, and compassion to make fundraising simple and impactful.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {/* Step 1: Start a Fundraiser */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md border border-gray-100">
-              <div className="mb-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
+            {/* Left Column: Image */}
+            <div className="md:w-1/2 flex justify-center">
+              <div className="w-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden aspect-video relative flex items-center justify-center">
                 <Image
-                  src="https://images.unsplash.com/photo-1557804506-669a67965da9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Start a Fundraiser"
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover"
+                  src={stepsData[activeStep].image}
+                  alt={stepsData[activeStep].title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-opacity duration-500"
                 />
+                {/* Optional: Add a play/pause button if it's meant to be a video placeholder */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 text-white text-5xl opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                  {/* <PlayCircle size={60} /> */}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Start a Fundraiser</h3>
-              <p className="text-gray-600">
-                Set up your campaign in minutes, share your story, and set a fundraising goal. It's free and easy!
-              </p>
             </div>
 
-            {/* Step 2: Share with Your Network */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md border border-gray-100">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1497911674483-fe3917454232?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Share with Your Network"
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Share with Your Network</h3>
-              <p className="text-gray-600">
-                Reach more donors by sharing your campaign on social media, email, and text.
-              </p>
-            </div>
-
-            {/* Step 3: Receive Donations */}
-            <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md border border-gray-100">
-              <div className="mb-4">
-                <Image
-                  src="https://images.unsplash.com/photo-1593113616828-6f22bce35d7b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Receive Donations"
-                  width={120}
-                  height={120}
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Receive Donations</h3>
-              <p className="text-gray-600">
-                All donations go directly to your cause, with secure and timely transfers.
-              </p>
+            {/* Right Column: Steps */}
+            <div className="md:w-1/2 flex flex-col items-start text-left space-y-8">
+              {stepsData.map((step, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full
+                              ${activeStep === index ? 'bg-white shadow-md border border-gray-200' : 'hover:bg-gray-100'}`}
+                  onClick={() => setActiveStep(index)}
+                >
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white
+                                  ${activeStep === index ? 'bg-dark' : 'bg-gray-400'}`}>
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className={`text-xl font-semibold mb-1 ${activeStep === index ? 'text-gray-900' : 'text-gray-700'}`}>
+                      {step.title}
+                    </h3>
+                    <p className={`text-gray-600 ${activeStep === index ? 'block' : 'hidden md:block'}`}>
+                      {step.description}
+                    </p>
+                    {step.linkText && (
+                      <Link href={step.linkHref} className="text-gofundmeBlue text-sm hover:underline mt-1 block">
+                        {step.linkText}
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
