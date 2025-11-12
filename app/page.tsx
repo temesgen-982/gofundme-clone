@@ -13,10 +13,7 @@ export default function HomePage() {
     <>
       <section className="w-full bg-white py-10 overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-20 relative">
-          {/* Dotted lines - you'd need a more complex solution for these, possibly SVG or absolute positioned divs with border-style: dotted */}
-          {/* For now, this is a placeholder idea */}
           <div className="absolute inset-0 hidden md:block z-0 opacity-20">
-            {/* Example of a connecting line (simplified) */}
             <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border border-dotted border-gray-400 rounded-full animate-spin-slow"></div>
           </div>
 
@@ -26,7 +23,7 @@ export default function HomePage() {
             {/* Your Cause */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float -translate-y-4 translate-x-20">
               <Image
-                src="https://images.unsplash.com/photo-1599052994917-094119d80d21?auto=format&fit=crop&q=60&w=400" // Image of a family/child for 'Your Cause'
+                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Your cause"
                 width={90}
                 height={90}
@@ -38,7 +35,7 @@ export default function HomePage() {
             {/* Medical */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float-delayed -translate-y-1 -translate-x-10">
               <Image
-                src="https://images.unsplash.com/photo-1532938911079-cdfd0ed53f06?auto=format&fit=crop&q=60&w=400" // Medical professional or patient
+                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Medical"
                 width={100}
                 height={100}
@@ -50,7 +47,7 @@ export default function HomePage() {
             {/* Emergency */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float -translate-y-2 translate-x-10">
               <Image
-                src="https://images.unsplash.com/photo-1543874017-f50f75723cf7?auto=format&fit=crop&q=60&w=400" // Image related to emergency/disaster
+                src="https://images.unsplash.com/photo-1635247187021-ad5ab658bc5e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZW1lcmdlbmN5fGVufDB8fDB8fHww"
                 alt="Emergency"
                 width={80}
                 height={80}
@@ -78,7 +75,7 @@ export default function HomePage() {
             {/* Education */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[120px] h-[120px] flex items-center justify-center animate-float translate-y-4 -translate-x-20">
               <Image
-                src="https://images.unsplash.com/photo-1546410531-bb4439c36211?auto=format&fit=crop&q=80&w=870" // Image related to education
+                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww"
                 alt="Education"
                 width={100}
                 height={100}
@@ -90,7 +87,7 @@ export default function HomePage() {
             {/* Business */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[110px] h-[110px] flex items-center justify-center animate-float-delayed translate-y-1 translate-x-10">
               <Image
-                src="https://images.unsplash.com/photo-1556761175-5973dd3039d7?auto=format&fit=crop&q=60&w=400" // Image related to business
+                src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3N8ZW58MHx8MHx8fDA%3D"
                 alt="Business"
                 width={90}
                 height={90}
