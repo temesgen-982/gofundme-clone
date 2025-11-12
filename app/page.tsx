@@ -89,7 +89,7 @@ export default function HomePage() {
       </section>
 
       {/* How it Works Section */}
-      <section className="bg-gray-50 py-10">
+      <section className="py-10">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Fundraising on FundSphere is easy, powerful, and trusted.
