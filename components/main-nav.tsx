@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -15,34 +14,34 @@ import {
 
 
 export function MainNav() {
-  const desktopNavItems = [
-    { title: "Donate", href: "/donate" },
-    { title: "Fundraise", href: "/start" },
-    { title: "About", href: "/about" },
-  ];
+  /*const desktopNavItems = [
+  ];*/
 
   const mobileNavItems = [
     { title: "Home", href: "/" },
-    { title: "Donate", href: "/donate" },
-    { title: "Fundraise", href: "/start" },
-    { title: "About", href: "/about" },
+    { title: "Donate", href: "/" },
+    { title: "About", href: "/" },
   ];
 
   return (
-    <header className="sticky flex items-stretch justify-stretch top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Button variant="ghost" size="icon" className="mr-4 text-gray-700 hover:text-gray-900">
-          <Search className="h-5 w-5" />
-          <span className="sr-only">Search</span>
-        </Button>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto relative flex h-16 items-center justify-center">
+        <div className="hidden md:flex items-center space-x-6 text-sm font-medium absolute left-0">
+          <Button variant="ghost" size="icon" className="mr-4 text-gray-700 hover:text-gray-900">
+            <Search className="h-5 w-5" />
+            <span className="sr-only">Search</span>
+          </Button>
+          <Link href="/">Donate</Link>
+          <Link href="/">Fundraise</Link>
+        </div>
 
-        <Link href="/" className="mr-auto flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <span className="font-bold text-2xl text-gofundmeBlue">FundSphere</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium ml-auto">
-          {desktopNavItems.map((item) => (
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium absolute right-0">
+          {/*desktopNavItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -50,19 +49,19 @@ export function MainNav() {
             >
               {item.title}
             </Link>
-          ))}
-          <Link href="/signin">
+          ))*/}
+          <Link href="/">
             <Button variant="ghost" className="hover:bg-gray-100 px-4">Sign In</Button>
           </Link>
-          <Link href="/start">
-            <Button className="bg-gofundmeBlue hover:bg-gofundmeBlue/90 text-white font-semibold px-4 py-2">
+          <Link href="/">
+            <Button className="font-semibold px-4 py-2 rounded-full">
               Start a Fundraiser
             </Button>
           </Link>
         </nav>
 
         {/* Mobile Navigation and Trigger */}
-        <div className="md:hidden flex items-center ml-auto">
+        <div className="md:hidden flex items-center absolute right-4">
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -95,14 +94,16 @@ export function MainNav() {
                 <Link href="/signin" className="flex w-full items-center py-2 text-lg font-semibold">
                   Sign In
                 </Link>
-                <Link href="/start" className="flex w-full items-center py-2 text-lg font-semibold">
-                  <Button className="w-full bg-gofundmeBlue hover:bg-gofundmeBlue/90">Start a Fundraiser</Button>
+                <Link href="/">
+                  <Button className="font-semibold px-4 py-2 rounded-full">
+                    Start a Fundraiser
+                  </Button>
                 </Link>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
-      </div>
-    </header>
+      </div >
+    </header >
   );
 }
