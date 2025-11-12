@@ -1,10 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Sparkles, Share2, CircleDollarSign } from "lucide-react";
 
-import { mockCampaigns, Campaign } from "@/lib/data";
+import { mockCampaigns } from "@/lib/data";
 import { CampaignCard } from "@/components/campaign-card";
 
 export default function HomePage() {
@@ -12,13 +11,13 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="w-full py-16 md:py-24 lg:py-32 bg-white text-center md:text-left">
-        <div className="container mx-auto flex-col gap-6 justify-center md:max-w-3xl">
+      <section className="w-full py-16 md:py-20 bg-white text-center md:text-left relative overflow-hidden">
+        <div className="container mx-auto flex flex-col gap-4 justify-center md:max-w-xl relative z-10">
           <p className="text-center">
             #1 crowdfunding platform
           </p>
-          <h1 className="text-4xl text-center sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900 mb-4">
-            Successful fund raisers start here.
+          <h1 className="mx-auto max-w-3xl text-balance text-center text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-gray-900 mb-6">
+            Successful fundraisers start here.
           </h1>
           <div className="flex justify-center space-x-4">
             <Link href="/start">
@@ -30,6 +29,42 @@ export default function HomePage() {
               </Button>
             </Link>
           </div>
+        </div>
+
+        {/* Floating circle images */}
+        <div className="absolute inset-0 z-0">
+          {/* Top-left */}
+          <Image
+            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            alt="Fundraiser 1"
+            width={80}
+            height={80}
+            className="hidden md:block rounded-full min-w-2.5 min-h-2.5 border border-black absolute top-18 left-10 animate-float"
+          />
+          {/* Top-right */}
+          <Image
+            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            alt="Fundraiser 2"
+            width={90}
+            height={90}
+            className="hidden md:block rounded-full absolute top-14 right-10 animate-float-slow"
+          />
+          {/* Bottom-left */}
+          <Image
+            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            alt="Fundraiser 3"
+            width={90}
+            height={90}
+            className="hidden md:block rounded-full absolute bottom-12 left-32 animate-float-delayed"
+          />
+          {/* Bottom-right */}
+          <Image
+            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            alt="Fundraiser 4"
+            width={70}
+            height={70}
+            className="hidden md:block rounded-full absolute bottom-12 right-32 animate-float"
+          />
         </div>
       </section>
 
