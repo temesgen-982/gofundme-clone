@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,44 +12,30 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/background.jpg"
-            alt="Community helping each other"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            className="brightness-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-        </div>
-
-        <div className="container relative z-10 text-white text-center md:text-left md:max-w-3xl"> {/* Simplified layout for just the text */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-4">
-            Your Compassion. Their Future.
-          </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-lg mx-auto md:mx-0">
-            Support causes you care about, from emergency relief to personal dreams.
-            Every donation makes a difference.
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-white text-center md:text-left">
+        <div className="container mx-auto flex-col gap-6 justify-center md:max-w-3xl">
+          <p className="text-center">
+            #1 crowdfunding platform
           </p>
-          <div className="flex justify-center md:justify-start space-x-4">
+          <h1 className="text-4xl text-center sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900 mb-4">
+            Successful fund raisers start here.
+          </h1>
+          <div className="flex justify-center space-x-4">
             <Link href="/start">
-              <Button size="lg" className="bg-gofundmeBlue hover:bg-gofundmeBlue/90 text-white font-semibold py-3 px-8 rounded-full shadow-lg">
+              <Button
+                size="lg"
+                className="text-white font-semibold py-3 px-8 rounded-full shadow-lg"
+              >
                 Start a Fundraiser
-              </Button>
-            </Link>
-            <Link href="/explore">
-              <Button size="lg" variant="secondary" className="bg-white text-gofundmeBlue hover:bg-gray-100 font-semibold py-3 px-8 rounded-full shadow-lg">
-                Explore Campaigns
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
+
       {/* Campaigns Section */}
-      <section className="container py-12 md:py-16 lg:py-20">
+      <section className="container mx-auto py-12 md:py-16 lg:py-20">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Featured Campaigns</h2>
           <Link href="/explore-all">
@@ -70,7 +55,7 @@ export default function HomePage() {
 
       {/* How it Works Section */}
       <section className="bg-gray-50 py-12 md:py-16 lg:py-20">
-        <div className="container text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Fundraising on FundSphere is easy, powerful, and trusted.
           </h2>
