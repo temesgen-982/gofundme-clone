@@ -6,7 +6,7 @@ import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { mockCampaigns, getCampaignBySlug, Campaign, Comment } from "@/lib/data";
+import { mockCampaigns, getCampaignBySlug } from "@/lib/data";
 
 // Dynamic paths to be generated at build time.
 export async function generateStaticParams() {
@@ -37,7 +37,7 @@ export default async function DonationDetailPage({ params }: DonationDetailPageP
   const progress = Math.min((campaign.currentAmount / campaign.goalAmount) * 100, 100);
 
   return (
-    <div className="container py-8 md:py-12 lg:py-16">
+    <div className="container mx-auto py-8 md:py-12 lg:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         {/* Campaign Details (Left/Main Column) */}
         <div className="lg:col-span-2">
