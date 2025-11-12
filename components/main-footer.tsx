@@ -45,16 +45,16 @@ export function MainFooter() {
             Connecting generosity with those in need. Support causes you care about.
           </p>
           <div className="flex space-x-4">
-            <Link href="#" aria-label="Facebook" className="hover:text-white transition-colors">
+            <Link href="#" aria-label="Facebook" className="hover:text-blue-800 transition-colors">
               <SiFacebook size={24} />
             </Link>
-            <Link href="#" aria-label="Twitter" className="hover:text-white transition-colors">
+            <Link href="#" aria-label="Twitter" className="hover:text-gray-800 transition-colors">
               <SiX size={24} />
             </Link>
-            <Link href="#" aria-label="Instagram" className="hover:text-white transition-colors">
+            <Link href="#" aria-label="Instagram" className="hover:text-purple-800 transition-colors">
               <SiInstagram size={24} />
             </Link>
-            <Link href="#" aria-label="YouTube" className="hover:text-white transition-colors">
+            <Link href="#" aria-label="YouTube" className="hover:text-red-600 transition-colors">
               <SiYoutube size={24} />
             </Link>
           </div>
@@ -67,7 +67,7 @@ export function MainFooter() {
             <ul className="space-y-2">
               {section.links.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm hover:text-white transition-colors">
+                  <Link href={link.href} className="text-sm transition-colors">
                     {link.name}
                   </Link>
                 </li>
