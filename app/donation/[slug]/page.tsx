@@ -36,9 +36,9 @@ export default async function DonationDetailPage({ params }: DonationDetailPageP
 
   return (
     <div className="container mx-auto py-8 md:py-12 lg:py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
         {/* Campaign Details (Left/Main Column) */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           {/* Campaign Image */}
           <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-md mb-6">
             <Image
@@ -79,21 +79,50 @@ export default async function DonationDetailPage({ params }: DonationDetailPageP
         </div>
 
         {/* Donation Sidebar (Right Column) */}
-        <div className="lg:col-span-1">
-          <Card className="shadow-lg sticky top-24"> {/* Sticky makes it stay when scrolling */}
-            <CardHeader>
-              <CardTitle className="text-2xl font-bold text-gray-900">
-                ${campaign.currentAmount.toLocaleString()} raised
-              </CardTitle>
-              <CardDescription className="text-gray-600">
-                of ${campaign.goalAmount.toLocaleString()} goal
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Progress value={progress} className="h-3 mb-2 bg-gray-200 [&::-webkit-progress-value]:bg-gofundmeBlue" />
-              <p className="text-sm text-gray-600 text-right">{progress.toFixed(0)}% complete</p>
-              <p className="text-md text-gray-700 mt-4">{campaign.backers} donations</p>
+        <div className="lg:col-span-2">
+          <Card className="shadow-lg sticky top-24">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-4">
+                {/* Circular Progress Bar */}
+                <div className="relative w-24 h-24">
+                  <svg className="w-full h-full" viewBox="0 0 100 100">
+                    {/* Background circle */}
+                    <circle
+                      className="text-gray-200 stroke-current"
+                      strokeWidth="10"
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      fill="transparent"
+                    ></circle>
+                    {/* Progress circle */}
+                    <circle
+                      className="text-green stroke-current"
+                      strokeWidth="10"
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      fill="transparent"
+                      strokeDasharray={`${2 * Math.PI * 40}`}
+                      strokeDashoffset={`${2 * Math.PI * 40 * (1 - progress / 100)}`}
+                      transform="rotate(-90 50 50)" // Start from top
+                    ></circle>
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xl font-bold text-gray-800">{progress.toFixed(0)}%</span>
+                  </div>
+                </div>
 
+                {/* Text Content */}
+                <div>
+                  <p className="text-xl font-semibold text-gray-900">
+                    ${campaign.currentAmount.toLocaleString()} USD raised
+                  </p>
+                  <p className="text-md text-gray-600 mt-1">
+                    <span className="underline">${(campaign.goalAmount / 1000).toFixed(0)}K goal</span> &middot; {campaign.backers.toLocaleString()} donations
+                  </p>
+                </div>
+              </div>
               <div className="mt-6 space-y-4">
                 <Input type="number" placeholder="Enter amount (e.g., 50)" className="h-12 text-lg" />
                 <Button className="w-full h-12 text-lg bg-dark hover:bg-dark/80 text-light rounded-full">
