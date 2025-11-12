@@ -37,5 +37,7 @@ gofundme-clone is a front-end implementation of a crowdfunding platform UI. It d
 ---
 
 ## Contact
-Owner: temesgen-982 — https://github.com/temesgen-982
+
+https://github.com/temesgen-982
+
 tedenadane@gmail.com
