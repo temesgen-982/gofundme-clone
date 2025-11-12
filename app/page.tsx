@@ -39,7 +39,7 @@ export default function HomePage() {
             alt="Fundraiser 1"
             width={80}
             height={80}
-            className="hidden md:block rounded-full min-w-2.5 min-h-2.5 border border-black absolute top-18 left-10 animate-float"
+            className="hidden md:block rounded-full min-w-2.5 min-h-2.5 border border-gray-800 absolute top-18 left-10 animate-float"
           />
           {/* Top-right */}
           <Image
