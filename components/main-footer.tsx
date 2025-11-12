@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FlipVertical, Bird, TvMinimalPlay } from "lucide-react"; // Social icons
+import { SiYoutube, SiX, SiInstagram, SiFacebook } from "@icons-pack/react-simple-icons";
 
 export function MainFooter() {
   const currentYear = new Date().getFullYear();
@@ -8,42 +8,34 @@ export function MainFooter() {
     {
       title: "About Us",
       links: [
-        { name: "Our Mission", href: "/mission" },
-        { name: "How it Works", href: "/how-it-works" },
-        { name: "Careers", href: "/careers" },
-        { name: "Press", href: "/press" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { name: "Help Center", href: "/help" },
-        { name: "Trust & Safety", href: "/safety" },
-        { name: "Refund Policy", href: "/refund" },
-        { name: "Contact Us", href: "/contact" },
+        { name: "Our Mission", href: "/" },
+        { name: "How it Works", href: "/" },
+        { name: "Careers", href: "/" },
+        { name: "Press", href: "/" },
       ],
     },
     {
       title: "Community",
       links: [
-        { name: "Fundraising Tips", href: "/tips" },
-        { name: "Success Stories", href: "/stories" },
-        { name: "Partners", href: "/partners" },
+        { name: "Fundraising Tips", href: "/" },
+        { name: "Success Stories", href: "/" },
+        { name: "Partners", href: "/" },
       ],
     },
     {
       title: "Legal",
       links: [
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Cookie Policy", href: "/cookies" },
+        { name: "Help Center", href: "/" },
+        { name: "Terms of Service", href: "/" },
+        { name: "Privacy Policy", href: "/" },
+        { name: "Cookie Policy", href: "/" },
       ],
     },
   ];
 
   return (
-    <footer className="w-full bg-gray-800 text-gray-300 py-12">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="w-full py-12 border-t border-gray-400">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
         {/* Brand Info & Social Media */}
         <div className="col-span-1 lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
           <Link href="/" className="flex items-center space-x-2 mb-4">
@@ -54,16 +46,16 @@ export function MainFooter() {
           </p>
           <div className="flex space-x-4">
             <Link href="#" aria-label="Facebook" className="hover:text-white transition-colors">
-              <FlipVertical className="h-6 w-6" />
+              <SiFacebook size={24} />
             </Link>
             <Link href="#" aria-label="Twitter" className="hover:text-white transition-colors">
-              <Bird className="h-6 w-6" />
+              <SiX size={24} />
             </Link>
             <Link href="#" aria-label="Instagram" className="hover:text-white transition-colors">
-              <Bird className="h-6 w-6" />
+              <SiInstagram size={24} />
             </Link>
             <Link href="#" aria-label="YouTube" className="hover:text-white transition-colors">
-              <TvMinimalPlay className="h-6 w-6" />
+              <SiYoutube size={24} />
             </Link>
           </div>
         </div>
@@ -71,7 +63,7 @@ export function MainFooter() {
         {/* Navigation Links */}
         {footerLinks.map((section) => (
           <div key={section.title} className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+            <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
             <ul className="space-y-2">
               {section.links.map((link) => (
                 <li key={link.name}>
@@ -86,7 +78,7 @@ export function MainFooter() {
       </div>
 
       {/* Copyright Section */}
-      <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+      <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm">
         &copy; {currentYear} FundSphere. All rights reserved.
       </div>
     </footer>
