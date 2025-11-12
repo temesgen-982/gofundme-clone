@@ -14,20 +14,20 @@ export default function HomePage() {
     {
       title: "Use our tools to create your fundraiser",
       description: "You'll be guided by prompts to add fundraiser details and set your goal. Make updates anytime.",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965da9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/vector-1760083742244-fbac4356520a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       linkText: "Get tips for starting your fundraiser.",
       linkHref: "/"
     },
     {
       title: "Reach donors by sharing",
       description: "Share your fundraiser link and use the resources in your dashboard to gain momentum.",
-      image: "https://images.unsplash.com/photo-1497911674483-fe3917454232?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/vector-1743883866466-ae5c5446a36a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       linkText: null // No specific link for this step in the example
     },
     {
       title: "Securely receive funds",
       description: "Add your bank information, or invite your fundraiser beneficiary to add theirs, and start receiving funds.",
-      image: "https://images.unsplash.com/photo-1593113616828-6f22bce35d7b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/vector-1760080403959-8138486d14af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       linkText: null // No specific link for this step in the example
     },
   ];
@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-5xl mx-auto">
             {/* Left Column: Image */}
             <div className="md:w-1/2 flex justify-center">
-              <div className="w-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden aspect-video relative flex items-center justify-center">
+              <div className="w-full h-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden aspect-video relative flex items-center justify-center">
                 <Image
                   src={stepsData[activeStep].image}
                   alt={stepsData[activeStep].title}
@@ -131,7 +131,7 @@ export default function HomePage() {
                   objectFit="cover"
                   className="transition-opacity duration-500"
                 />
-                {/* Optional: Add a play/pause button if it's meant to be a video placeholder */}
+                {/* play/pause button */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 text-white text-5xl opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
                   {/* <PlayCircle size={60} /> */}
                 </div>
@@ -143,8 +143,7 @@ export default function HomePage() {
               {stepsData.map((step, index) => (
                 <div
                   key={index}
-                  className={`flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full
-                              ${activeStep === index ? 'bg-white shadow-md border border-gray-200' : 'hover:bg-gray-100'}`}
+                  className="flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full"
                   onClick={() => setActiveStep(index)}
                 >
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white
