@@ -43,7 +43,7 @@ export default function HomePage() {
           />
           {/* Top-right */}
           <Image
-            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            src="https://images.unsplash.com/photo-1579208575657-c595a05383b7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
             alt="Fundraiser 2"
             width={90}
             height={90}
@@ -51,7 +51,7 @@ export default function HomePage() {
           />
           {/* Bottom-left */}
           <Image
-            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVscHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400"
             alt="Fundraiser 3"
             width={90}
             height={90}
@@ -59,7 +59,7 @@ export default function HomePage() {
           />
           {/* Bottom-right */}
           <Image
-            src="https://images.unsplash.com/vector-1756366565221-3c60c4527a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580"
+            src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9uYXRlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400"
             alt="Fundraiser 4"
             width={70}
             height={70}

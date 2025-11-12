@@ -42,14 +42,14 @@ export const mockCampaigns: Campaign[] = [
     endDate: "2023-12-31",
     organizer: {
       name: "Elmwood PTA",
-      avatarUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
+      avatarUrl: "https://images.unsplash.com/vector-1756301726355-6e695b181820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       profileUrl: "#",
     },
     comments: [
       {
         id: "comm-001",
         author: "Sarah J.",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 50,
         message: "So glad to support our local school! Hope this helps.",
         timestamp: "2023-10-25T10:00:00Z",
@@ -57,7 +57,7 @@ export const mockCampaigns: Campaign[] = [
       {
         id: "comm-002",
         author: "Anonymous",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 20,
         message: "Wishing you the best!",
         timestamp: "2023-10-24T18:15:00Z",
@@ -65,7 +65,7 @@ export const mockCampaigns: Campaign[] = [
       {
         id: "comm-003",
         author: "David L.",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 100,
         message: "Elmwood holds a special place in my heart. Good luck!",
         timestamp: "2023-10-23T09:30:00Z",
@@ -86,14 +86,14 @@ export const mockCampaigns: Campaign[] = [
     endDate: "2024-01-15",
     organizer: {
       name: "Global Relief Foundation",
-      avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+      avatarUrl: "https://images.unsplash.com/vector-1756301726355-6e695b181820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       profileUrl: "#",
     },
     comments: [
       {
         id: "comm-004",
         author: "Maria S.",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 25,
         message: "Sending strength and support!",
         timestamp: "2023-10-26T11:20:00Z",
@@ -101,7 +101,7 @@ export const mockCampaigns: Campaign[] = [
       {
         id: "comm-005",
         author: "Robert G.",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 500,
         message: "Proud to contribute to this vital cause.",
         timestamp: "2023-10-25T16:00:00Z",
@@ -122,14 +122,14 @@ export const mockCampaigns: Campaign[] = [
     endDate: "2024-03-01",
     organizer: {
       name: "Paw Protection League",
-      avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+      avatarUrl: "https://images.unsplash.com/vector-1756301726355-6e695b181820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       profileUrl: "#",
     },
     comments: [
       {
         id: "comm-006",
         author: "Emily R.",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 30,
         message: "For all the furry friends!",
         timestamp: "2023-10-26T08:45:00Z",
@@ -150,14 +150,14 @@ export const mockCampaigns: Campaign[] = [
     endDate: "2023-12-20",
     organizer: {
       name: "City Arts Council",
-      avatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+      avatarUrl: "https://images.unsplash.com/vector-1756301726355-6e695b181820?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
       profileUrl: "#",
     },
     comments: [
       {
         id: "comm-007",
         author: "Anonymous",
-        authorAvatarUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVtYWxlJTIwYXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=400",
+        authorAvatarUrl: "https://images.unsplash.com/vector-1739803316030-62b80e20fcc4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=580",
         amount: 25,
         message: "Love seeing local talent thrive!",
         timestamp: "2023-10-26T15:00:00Z",
