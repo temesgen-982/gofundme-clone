@@ -67,7 +67,7 @@ export default function HomePage() {
               Successful fundraisers <br className="hidden sm:block" /> start here.
             </h1>
             <Link href="/">
-              <Button className="text-white bg-green-700 hover:bg-green-800 font-semibold py-3 px-8 rounded-full shadow-lg">
+              <Button className="text-light bg-dark font-semibold py-3 px-8 rounded-full shadow-lg">
                 Start a Fundraiser
               </Button>
             </Link>
