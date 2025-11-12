@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
   const [progress, setProgress] = useState(0);
-  const intervalTime = 5000; // 5 seconds per step
+  const intervalTime = 10000; // 10 seconds per step
 
   // --- Properly typed refs (for timers)
   const stepIntervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -45,17 +45,14 @@ export default function HowItWorks() {
   const startTimers = () => {
     setProgress(0);
 
-    // ✅ Clear any existing timers safely
     if (stepIntervalRef.current) clearInterval(stepIntervalRef.current);
     if (progressIntervalRef.current) clearInterval(progressIntervalRef.current);
 
-    // Step rotation
     stepIntervalRef.current = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % stepsData.length);
       setProgress(0);
     }, intervalTime);
 
-    // Progress animation
     progressIntervalRef.current = setInterval(() => {
       setProgress((prev) => (prev >= 100 ? 100 : prev + 100 / (intervalTime / 100)));
     }, 100);
@@ -100,7 +97,7 @@ export default function HowItWorks() {
                 className="object-cover transition-opacity duration-500"
               />
               {/* Subtle progress bar */}
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200">
+              <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gray-200">
                 <div
                   className="h-full bg-gray-800 transition-all duration-100 ease-linear"
                   style={{ width: `${progress}%` }}
@@ -119,8 +116,8 @@ export default function HowItWorks() {
               >
                 <div
                   className={`flex-shrink-0 border border-dark w-9 h-9 rounded-full flex items-center justify-center font-bold ${activeStep === index
-                      ? "bg-dark text-white"
-                      : "bg-white text-dark"
+                    ? "bg-dark text-white"
+                    : "bg-white text-dark"
                     }`}
                 >
                   {index + 1}
