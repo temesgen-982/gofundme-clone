@@ -71,8 +71,8 @@ export default function HowItWorks() {
                   className="flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all duration-300 w-full"
                   onClick={() => setActiveStep(index)}
                 >
-                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-white
-                                  ${activeStep === index ? 'bg-dark' : 'bg-gray-400'}`}>
+                  <div className={`flex-shrink-0 border border-dark w-9 h-9 rounded-full flex items-center justify-center font-bold
+                                  ${activeStep === index ? 'bg-dark text-white' : 'bg-white text-dark'}`}>
                     {index + 1}
                   </div>
                   <div>
