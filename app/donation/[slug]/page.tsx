@@ -14,8 +14,6 @@ export async function generateStaticParams() {
     slug: campaign.slug,
   }));
 
-  console.log("Generated Static Params:", params);
-
   return params;
 }
 
@@ -94,12 +92,15 @@ export default async function DonationDetailPage({ params }: DonationDetailPageP
             <CardContent>
               <Progress value={progress} className="h-3 mb-2 bg-gray-200 [&::-webkit-progress-value]:bg-gofundmeBlue" />
               <p className="text-sm text-gray-600 text-right">{progress.toFixed(0)}% complete</p>
-              <p className="text-md text-gray-700 mt-4">{campaign.backers} people have donated</p>
+              <p className="text-md text-gray-700 mt-4">{campaign.backers} donations</p>
 
               <div className="mt-6 space-y-4">
                 <Input type="number" placeholder="Enter amount (e.g., 50)" className="h-12 text-lg" />
-                <Button className="w-full h-12 text-lg bg-gofundmeBlue hover:bg-gofundmeBlue/90">
-                  Donate Now
+                <Button className="w-full h-12 text-lg bg-dark hover:bg-dark/80 text-light rounded-full">
+                  Donate
+                </Button>
+                <Button className="w-full h-12 text-lg bg-light hover:bg-light/80 text-dark rounded-full">
+                  Share
                 </Button>
               </div>
             </CardContent>
