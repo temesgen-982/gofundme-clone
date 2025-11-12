@@ -102,7 +102,7 @@ export default function HomePage() {
             {/* Animals */}
             <div className="relative rounded-full bg-green-100 border-2 border-green-200 shadow-md w-[100px] h-[100px] flex items-center justify-center animate-float translate-y-2 -translate-x-20">
               <Image
-                src="https://images.unsplash.com/photo-1543466835-09a769850125?auto=format&fit=crop&q=60&w=400" // Image of animals
+                src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fHww"
                 alt="Animals"
                 width={80}
                 height={80}
