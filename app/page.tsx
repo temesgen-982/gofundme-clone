@@ -17,46 +17,52 @@ export default function HomePage() {
           {/* LEFT IMAGES */}
           <div className="hidden md:flex flex-col items-center justify-center gap-8 relative z-10">
             {/* Your Cause */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[110px] h-[110px] flex items-center justify-center animate-float -translate-y-4 translate-x-20 bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
-                alt="Your cause"
-                width={90}
-                height={90}
-                className="rounded-full object-cover w-[90px] h-[90px]"
-              />
-              <span className="absolute bottom-8 -left-8 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Your Cause
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[110px] h-[110px] flex items-center justify-center animate-float -translate-y-4 translate-x-20 bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Your cause"
+                  width={90}
+                  height={90}
+                  className="rounded-full object-cover w-[90px] h-[90px]"
+                />
+                <span className="absolute bottom-8 -left-8 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Your Cause
+                </span>
+              </div>
+            </Link>
 
             {/* Medical */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[120px] h-[120px] flex items-center justify-center animate-float-delayed -translate-y-1 -translate-x-10 bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
-                alt="Medical"
-                width={100}
-                height={100}
-                className="rounded-full object-cover w-[100px] h-[100px]"
-              />
-              <span className="absolute -right-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Medical
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[120px] h-[120px] flex items-center justify-center animate-float-delayed -translate-y-1 -translate-x-10 bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVkaWNhbHxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Medical"
+                  width={100}
+                  height={100}
+                  className="rounded-full object-cover w-[100px] h-[100px]"
+                />
+                <span className="absolute -right-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Medical
+                </span>
+              </div>
+            </Link>
 
             {/* Emergency */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[100px] h-[100px] flex items-center justify-center animate-float -translate-y-2 translate-x-10 bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1635247187021-ad5ab658bc5e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZW1lcmdlbmN5fGVufDB8fDB8fHww"
-                alt="Emergency"
-                width={80}
-                height={80}
-                className="rounded-full object-cover w-[80px] h-[80px]"
-              />
-              <span className="absolute bottom-8 -right-13 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Emergency
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[100px] h-[100px] flex items-center justify-center animate-float -translate-y-2 translate-x-10 bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1635247187021-ad5ab658bc5e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZW1lcmdlbmN5fGVufDB8fDB8fHww"
+                  alt="Emergency"
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover w-[80px] h-[80px]"
+                />
+                <span className="absolute bottom-8 -right-13 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Emergency
+                </span>
+              </div>
+            </Link>
 
           </div>
 
@@ -76,47 +82,53 @@ export default function HomePage() {
           {/* RIGHT IMAGES */}
           <div className="hidden md:flex flex-col items-center justify-center gap-8 relative z-10">
             {/* Education */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[120px] h-[120px] flex items-center justify-center animate-float translate-y-4 -translate-x-20 bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww"
-                alt="Education"
-                width={100}
-                height={100}
-                className="rounded-full object-cover w-[100px] h-[100px]"
-              />
-              <span className="absolute -right-8 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Education
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[120px] h-[120px] flex items-center justify-center animate-float translate-y-4 -translate-x-20 bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWR1Y2F0aW9ufGVufDB8fDB8fHww"
+                  alt="Education"
+                  width={100}
+                  height={100}
+                  className="rounded-full object-cover w-[100px] h-[100px]"
+                />
+                <span className="absolute -right-8 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Education
+                </span>
+              </div>
+            </Link>
 
 
             {/* Business */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[110px] h-[110px] flex items-center justify-center bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=400&auto=format&fit=crop&q=60"
-                alt="Business"
-                width={90}
-                height={90}
-                className="rounded-full object-cover w-[90px] h-[90px]"
-              />
-              <span className="absolute bottom-10 -left-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Business
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[110px] h-[110px] flex items-center justify-center bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=400&auto=format&fit=crop&q=60"
+                  alt="Business"
+                  width={90}
+                  height={90}
+                  className="rounded-full object-cover w-[90px] h-[90px]"
+                />
+                <span className="absolute bottom-10 -left-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Business
+                </span>
+              </div>
+            </Link>
 
             {/* Animals */}
-            <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[100px] h-[100px] flex items-center justify-center animate-float translate-y-2 -translate-x-20 bg-white">
-              <Image
-                src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fHww"
-                alt="Animals"
-                width={80}
-                height={80}
-                className="rounded-full object-cover w-[80px] h-[80px]"
-              />
-              <span className="absolute -right-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
-                Animal
-              </span>
-            </div>
+            <Link href="/">
+              <div className="relative rounded-full border-2 border-green-500 shadow-[0_2px_6px_rgba(0,0,0,0.15)] w-[100px] h-[100px] flex items-center justify-center animate-float translate-y-2 -translate-x-20 bg-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fHww"
+                  alt="Animals"
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover w-[80px] h-[80px]"
+                />
+                <span className="absolute -right-7 text-xs bg-gray-200 px-2 py-2 rounded-lg shadow-sm text-gray-700 font-bold">
+                  Animal
+                </span>
+              </div>
+            </Link>
 
           </div>
         </div>
