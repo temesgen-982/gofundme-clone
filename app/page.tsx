@@ -53,7 +53,7 @@ export default function HomePage() {
                 height={80}
                 className="rounded-full object-cover w-[80px] h-[80px]"
               />
-              <span className="absolute bottom-8 -left-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Emergency</span>
+              <span className="absolute bottom-8 -right-13 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Emergency</span>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export default function HomePage() {
                 height={100}
                 className="rounded-full object-cover w-[100px] h-[100px]"
               />
-              <span className="absolute -left-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Education</span>
+              <span className="absolute -right-8 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Education</span>
             </div>
 
             {/* Business */}
@@ -93,7 +93,7 @@ export default function HomePage() {
                 height={90}
                 className="rounded-full object-cover w-[90px] h-[90px]"
               />
-              <span className="absolute bottom-3 -right-6 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Business</span>
+              <span className="absolute bottom-10 -left-7 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Business</span>
             </div>
 
             {/* Animals */}
@@ -105,7 +105,7 @@ export default function HomePage() {
                 height={80}
                 className="rounded-full object-cover w-[80px] h-[80px]"
               />
-              <span className="absolute -left-7 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Animal</span>
+              <span className="absolute -right-7 text-xs bg-white px-3 py-1 rounded-full shadow-sm text-gray-700">Animal</span>
             </div>
           </div>
         </div>
